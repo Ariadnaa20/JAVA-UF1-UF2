@@ -30,7 +30,7 @@ public class Main {
     }
     private static void MensajeSalida() {
         System.out.println("Gracias por utilizar nuestro programa de muestra sobre Programación Modular");
-    }
+    }  /*COMENTARI*/
 
     private static void MultiplicarDosNumeros() {
         //INICIO - DECLARACIÓN VARIBALES
