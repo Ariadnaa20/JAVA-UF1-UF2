@@ -1,0 +1,19 @@
+JAVA STRING
+JAVA SMART CODE
+JAVA MÉTODES Funcions
+JAVA PARAMETRES AMB METODES
+JAVA RESURSIVITAT
+
+DISENY MODULAR: es divideix un codi en codis mes petits de diferents funcionalitats. Del problema gran a problemes mes
+petits, d'aico se'n diu top-down. exemple:
+
+ public static int CalculaSuma(int a, int b){  // hem de posar int ja que es la variable que volem que ens torni
+            int suma=0;
+            suma= a+b; puede ser x o y
+            return resultat;
+
+       }
+
+Com es crea un metode?
+Modifiers: determinan l'accessiblitat al metode: PUBLIC, PRIVATE(accessible a la clase on d'ha declarat main)
+                                                 PROTECTED(accessible a la clase on d'ha declarat main i una herencia)

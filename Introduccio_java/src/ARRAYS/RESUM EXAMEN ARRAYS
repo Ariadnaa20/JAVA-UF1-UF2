@@ -1,0 +1,210 @@
+apart de la fulla
+
+ACCEDIM A UNA ARRAY:
+
+float[] scores = {7.5f,5.0f,8.5f,6.0f,4.0f};
+System.out.println(scores[1]);
+//Prints: 5.0
+
+exemple: fem una petita suma:
+double[] numeros= {4.0,6.2,3.75,5.1,9.99};
+double s = numeros[0] + numeros[3]   // creem variables
+                  4.0           5.1       // 9.1
+
+MODIFIQUEM:
+
+float[] scores = {7.5f,5.0f,8.5f,6.0f,4.0f};
+scores[1] = 9.99f;
+System.out.println(scores[1]); // 9.99f
+
+exemple:
+int[] array= new int[5];   // nomes estem creant les posicions 0 1 2 3 4 5
+array[0]++;      // la posicio 0 li estem sumant 1
+array[0]*=5     // la posicio 0 que ara val 1 la multipliquem per 5     resultat // 5
+array[1]+=2;
+
+
+PROPIETAT LENGTH
+ t'imprimeix el total de posicions, no el index que aquest cas seria 4 per aico tambe es int
+float[] scores = {7.5f,5.0f,8.5f,6.0f,4.0f};
+int longitud = scores.length; //5 conta les posicions, no el index es posa int pq les posicions es int
+
+exemple:
+float[] scores = {7.5f,5.0f,8.5f,6.0f,4.0f};
+
+int posicion= //valor introducido por el usuario scanner
+
+if ( (posicion>=0) && (posicion<scores.length) ){ // si la posicio es mes gran o igual a 0 i es mes petita que la llargada
+System.out.println(scores[posicion]);
+}else{
+System.out.println(“La posición introducida no existe”);
+}
+
+CLARO, AHORA IMAGINATE que hi han 100 numeros i els hem d'imprimir tots, no podem anar 1 per 1 llavors com ho fem?
+doncs amb el FOR reservant la i i la j :) o el  WHILE
+
+float[] scores = {7.5f,5.0f,8.5f,6.0f,4.0f};
+
+for (int i=0; i<scores.length; i++) { //posicio i = 0, condicio que la i ha de se mes petita que la llarg, i ++
+System.out.println( scores[i] );
+}
+
+int i=0;
+while(i<scores.length){
+System.out.println(scores[i]);
+i++;
+}
+
+
+SORTING(ordenar) full
+
+tambw es pot fer amb array sort
+
+
+ARRAYS AND LOOPS
+1. Average class score:
+// calcula la mitja
+float[] scores = {7.5f,5.0f,8.5f,6.0f,4.0f};
+float sumClassScore = 0;  // variable per sumar els mumeros
+
+for (int i=0; i<scores.length; i++) {
+sumClassScore = sumClassScore + scores[i];
+}
+System.out.println(“Media clase: ” +sumClassScore/scores.length)
+
+
+2. Find a score:
+// troba el numero
+float[] scores = {7.5f,5.0f,10.0f,6.0f,10.0f};
+boolean isInScores = false;
+for (int i=0; i<scores.length;i++){
+if (scores[i]==10){    // si el numero es igual a 10 scores es true
+isInScores=true;
+break;
+}
+}
+//Se ha encontrado?
+if (isInScores){
+System.out.println("Algún estudiante ha obtenido un 10");
+}else{
+System.out.println("Ningún estudiante ha obtenido un 10");
+}
+
+
+3. Input
+Scanner input = new Scanner(System.in);
+System.out.println("¿Cuántos alumnos hay en la clase?");
+int numMax = input.nextInt();
+input.nextLine();
+
+float[] scores = new float[numMax]; //Declaración e inicialización del array scores
+System.out.println("Introduce nota alumnos");
+System.out.println("Puedes introducirlas en una sola línea separadas por espacios");
+for (int i=0; i<scores.length;i++){
+float score = input.nextFloat();
+scores[i] = score; //Actualiza calificación en array
+}
+//Se ignoran los valores sobrantes de la última línea
+input.nextLine();
+
+4. Potèncias
+int[] potencias = new int[10];
+
+for (int i=0; i<potencias.length;i++){
+potencias[i]=(int) Math.pow((int)2,(int)i); //Actualiza potencia
+}
+
+
+5. Copiar arrays si la b no te res a dins
+int[] arrayA= {1,2,4};
+int[] arrayB = arrayA;
+
+
+6. Assignacions
+exemple 1:
+int i = 0;
+int j = 5;
+
+i=j; //a la variable “i” se le asigna el valor de “j” sempre de esquerra a dreta
+
+Systen.out.println(i); //Prints: 5
+
+exemple 2:
+// La variable “arrayA” accede a los
+   mismos datos de memoria que
+   “arrayB”
+
+
+int[] arrayA = {1,2,3,4,5};
+int[] arrayB = {6,7,8,9,10};
+
+arrayA=arrayB; //a la variable “arrayA” se le asigna el valor de “arrayB”
+
+for (int i=0;i<arrayA.length;i++){
+Systen.out.print(arrayA[i]+” ”); //Prints: 6 7 8 9 10
+}
+arrayB[0]=99; //se modifica valor de “arrayB” i tambien cambia a la A
+for (int i=0;i<arrayA.length;i++){
+Systen.out.print(arrayA[i]+” ”); //Prints: 99 7 8 9 10
+}
+
+
+exemple 3:
+float[] scores = {7.5f,5.0f,10.0f,6.0f,10.0f};
+float[] copyScores = new float[scores.length];
+
+//Vamos copiando elemento a elemento
+for (int i=0; i<scores.length;i++){
+copyScores[i]=scores[i];   // asigem els valors
+}
+for (int i=0; i<scores.length;i++){
+System.out.print(copyScores[i]+" "); //Prints: 7.5 5.0 10.0 6.0 10.0
+}
+
+
+ARRAYS 2D
+Array literal:   // consejo tener toda la fila columna completas para que no haya un //ArrayOutOfBoundsException
+
+float[][] grades= {
+{8.7f,9.3f,9.0f,7.5f,6.0f}, 0
+{9.3f,7.0f,9.5f,9.0f,7.5f}, 1
+{5.5f,7.5f,8.2f,8.0f,6.6f}, 2
+{9.0f,7.5f,9.0f,8.5f,7.0f}  3
+  0    1    2    3    4
+};
+
+System.out.println(grades[1][2]); //Prints: 9.5
+
+
+Array default value:   // et creara una taula sense valors de 0-3 filas i 0-4 columnas
+float[][] grades= new float[4][5];  // 0.0
+boolean                             // false
+char                                // NUL
+string                              // null
+
+
+Puc modificar els valors:
+float[][] grades= new float[5][6];
+grades[1][2] = 9.99f;  en lloc de 7.0
+System.out.println(grades[1][2]); //Prints: 9.99
+
+
+Propietat length
+System.out.println(grades.length); //3
+
+System.out.println(grades[3].length); //5
+                  |
+Esta línea imprime la longitud del tercer array unidimensional (primera fila) en grades, que es 5.
+Similarmente, las siguientes líneas imprimen la longitud de las otras filas, que también son 5.
+
+
+Iterem amb el FOR serveix per no imprimir un per un.
+
+
+Enrecordat que per el switch i do while tenim els exercicis del examen
+
+
+1. ponerle enunciado al chat
+2. condiciones, que me haga el codigo con comentarios,
+ i todo dentro del mismo main
+ solo con informacion datos que yo te he enviado

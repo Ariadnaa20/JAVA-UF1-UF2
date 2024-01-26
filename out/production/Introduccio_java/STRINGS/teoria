@@ -1,0 +1,217 @@
+TEORIA INICIAL
+1. STRING CLASS
+String message = “Hello”; conjunt de caracters
+Object variable
+diferencia entre objecte i classe= nosaltres creem l'objecte i la classe ja esta creada
+EXEMPLE:
+
+public class SmartPhone extends SmartDevice {
+
+    int modelo;
+
+    public SmartPhone(){}   //costructor que s'invoca amb string
+
+    public SmartPhone(int año, double diametro, String fabricante, Double pulgadas, String marca, int modelo) {
+        super(año, diametro, fabricante, pulgadas, marca);
+        this.modelo = modelo;    //constructor omplert
+    }
+
+    //metode
+
+}
+
+pasos:
+1 crear clase
+1 crear objecte de la clase
+2 crear metode per utlitzar l'objecte
+
+FINS ARA: class main amb metode main
+A PARTIR D'ARA: Classe creada per mi on faig un objecte i seguidament faig metodes amb aquest objecte.
+                Sempre tambe hi haura un main .
+                Invoquem la classe amb import.
+
+
+CREAR OBJECTE:
+String message="Hola, bondia"  -> ens crea l'objecte.
+
+Salt de linea: String message = “It was the best of times \nIt was the worst of times”;
+System.out.println(message);
+
+String message = “”; -> null
+
+input.next
+
+
+java.lang.String
+
+STRING docs.oracle.com
+array de chars
+
+0. variables
+1. crear objecte constructor buit i complert
+2. metodes:
+   calcula suma()
+   calcula resta()
+   i invocarlos en el main principal classe calculadora.
+
+Hi han diferents metodes:
+1. Int x (envia) no necesito que em retorni res, tipo nomes apagar la llum
+2. int suma = CalculaSuma(a,b) (envia, calcula)
+
+
+       public int CalculaSuma(int a, int b){  // hem de posar int ja que es la variable que volem que ens torni
+            int suma=0;
+            suma= a+b; puede ser x o y
+            return resultat;
+
+       }
+
+       CRIDO AL METODE: clase principal
+       void main(){
+            int a = 2;   pot ser x
+            int b= 3;  //5  pot ser y
+            int resultat;  //resultat 5
+
+            suma= CalculaSuma(a,b)
+
+       }
+
+       probar de ferho amb l'scanner
+
+Exepcions = fetes i tambe puc crear. try catch . exemple creada:
+    IndexOutOfBoundsException= se intenta acceder a una posición que no existe en la colección. gestionar errors.
+
+
+TEORIA CLASSE STRING
+
+hay diferentes maneras de declarar un string:
+
+1. String nombre="Clases de informática";
+2. String frase = new String("Soy una frase."); i per imprimir System.out.println(frase);
+3.  String nombre=new String(); i en la variable nombre guardo: nombre ="Soy el contenido de la variable objeto nombre"; i per imprimir System.out.println(nombre);
+
+Hi han diferentes METODES: (els exemples seguents son com si ja haguessis declaray una variable:
+
+1. Metode: String.ValueOf(N): serveix per convertir el valor de N a String. N pot ser de qualsevol tipus:
+
+
+1.1 Metode Length: Serveix per saber la llargada
+       exemple: System.out.println("Esta frase tiene " + nombre.length());
+
+
+
+
+
+2. IndexOf('caracter'): torna la posicio de la primera aparicio de caracter per exemple Hello World et tornara la o de hello
+
+3. lastIndexOf('caracter'): torna la posicio de l'ultima aparicio de caracter per exemple Hello World et tornara la o de world
+
+
+4. Metode  charAt(x) , torna la posicio  de de un caracter de la cadena d'strings, sempre começen pel 0.
+      Exemple:  System.out.println("La última letra de la frase es + nombre.charAt(nombre.length()-1));
+               o nombre.charAt(5) //ariaDna
+
+
+
+5. Metode  Substring: torna una subcadena que esta dins de la principal. Aquest metode conté dos parametres, la x es el primer caracter d'on volem volem extreure caracters sense contarla. La y es el primer caracter que no volem extreure o millor dit n-1.
+     Exemple: String nombre="Clases de informática ";
+                      // Devolvemos la palabra informática.
+                      String palabra=nombre.substring(11, 22);
+                      System.out.println(palabra);
+ conten els espais?
+
+
+6. Metode: Equals : compara dues cadenas de text i si son iguals serà true i si es false serà false
+    Exemple:
+                                      String cadena1="Aprendiendo programación.";
+                                      String cadena2="Aprendiendo programación.";
+
+                                      /* Comprobamos si las cadenas son iguales
+                                       * a traves del método equals.*/
+                                      System.out.println(cadena1.equals(cadena2));
+
+
+
+7. Metode: Equals ignore case: : es el mateix que l'anterior pero no diferencia entre majuscules i minúscules
+    exemple:         String cadena1="Aprendiendo programación.";
+                     String cadena2="APRENDIENDO PROGRAMACIÓN.";
+
+                     /* Comprobamos si las cadenas son iguales
+                      * a traves del método equals.*/
+                     System.out.println(cadena1.equalsIgnoreCase(cadena2));
+
+
+
+8. Metodo: ToUpperCase(): torna la cadena convertida en mayuscules
+    String text_mayus = text.toUpperCase();
+
+9. Metodo: ToLowerCse(): torna la cadenac convertida a minuscules
+    String text_minus = text.toLowerCase();
+
+
+
+
+10. Metode: Is empty: per verificar si la llista contè elements, si no contè es true i si contè serà false.
+    Exemple:
+                     // non-empty string
+                             String str1 = "Hello_Gfg";
+
+                             // empty string
+                             String str2 = "";
+
+                             // prints false
+                             System.out.println(str1.isEmpty());
+
+                             // prints true
+                             System.out.println(str2.isEmpty());
+
+
+
+11. Metodoe compareTo (String cadena):
+   Exemple:
+                    //Compare to a String
+                     String cadena = "RockStar";
+                     System.out.println("Compare To 'ROCKSTAR': " + cadena.compareTo("rockstar"));  // si es igual et retorna un 0 pero sino qualsevol altre nombre
+
+                     //Compare to - Ignore case
+                            System.out.println("Compare To 'ROCKSTAR' - Case Ignored: " + cadena.compareToIgnoreCase("ROCKSTAR"));
+
+
+13. Metode Contains:  comprovar si un text te una paraula
+   Exemple: text.contains()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

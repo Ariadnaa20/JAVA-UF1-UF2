@@ -1,0 +1,5 @@
+CODIGO:
+- Comentarios i decir por ejemplo // DECLAREM VARAIBLES, //DECLAREM SCANNER.
+- variable=input.nextLine
+- Les variables double i float recorda posar una d i una f al final
+- scanner.close();

@@ -1,0 +1,220 @@
+rainbow brackeets
+Variables names: palabras reservadas Java i estas no utilizarlas
+
+Les coonstants sempre mayuscules i son les que el reultat es el mateix
+
+COMENTARIOS
+/*    */ mas de una linea
+// una linea
+
+VARIABLES:
+
+Variable SCOPE: es aquella varibale ja inicializada amb un valor la quan la podem utlittzar en qualsevol part del codi
+NUMERO ENTERO
+long <-- -638882838, 87362378 (fins a la *63)
+int <-- -2500, 5930 (fins a *31)
+short <-- -25, 100 (fins a 5)
+byte <-- -1,6 (fins a 3)
+
+
+Final= una variable final significa que no puede canviar
+
+NUMERO DECIMAL (de gran a petit):
+double <-- -3849.78, 832.7 (fins a 15 digits)
+float <-- 30.5, 100.89 (fins a 6 digits)
+
+ Boolean --> Valor lògic= TRUE O FALSE
+ Char --> Caracter unicode --> unicode --> ex: 'a' 'z' '#' '4'
+ String --> Cadena de caracters --> ex: "Hello world", "Java is fun"
+COMO INICIALIZAR UNA VARIBALE el nombre ha de empezar en minuscula i si es compuesta la segunda con Mayus
+                              no pueden haver espacios en blanco ni tampoco empezar con numeros
+boolean isLogin = true;
+float ratio = 37.5f;
+double budget = 13450.99d;
+char letter = ‘a’;
+String greeting = “Hello world”;
+String miString = null;
+
+COMO PRINT A VARIABLE
+System.out.println(counter);
+System.out.println(isLogin);
+System.out.println(ratio);
+System.out.println(letter);
+System.out.println(greeting);
+
+
+ORDEN LECTURA
+1. Parentheses
+2. Multiplication and division (from left to right)
+3. Addition and substraction (from left to right
+
+
+MIRAR TABLA ASCII acabar de entender
+char letra= 'a';
+char letraMayuscula= (char)(letra-32); //ASCII character: A
+ASCII value: 97
+97-32=65
+
+
+Mates artimetriques:
+int i =0
+suma: + o ++ per incrementar valor +1
+resta - o -- per decrementar valor -1
+multipicació= *
+divisió=  /
+resta división: %
+
+
+
+
+proxima clase: String concatenacio repasar, if....
+https://exercism.org/ para practicar
+entender tabla ASCII
+
+OPERADORS
+== iguals
+!= no igual
+a>b
+a<b
+a>=b mes gran o igual
+a<= mes petit o igual
+
+
+OPERADORS Logics  per  ordre
+a || b or. una de les condicions es verdadera
+a && b TRUE cuando ambas sean verdaderas si una ya es falsa el resultado sera FALSE
+!a:
+boolean value = ! (3<5) ; //false
+                   true
+
+
+
+Crea clase IF
+java.utilXXX son les llibreries utils. aprendre en docs.oracle.com
+
+per inisializar un String : String frase=null;
+
+SCANNER
+input.nextFloat(); float
+input.nextDouble(); double
+input.nextBoolean(); boolean
+input.nextLine(); String
+
+PRINTLN
+ ouput i print System.out.println(“Hello World ”+name);
+Yeah Hello Kevin
+Adds new line after print
+message
+
+
+
+CONDICIONALS
+La diferencia entre el IF i el switch es que el if la condicio es booleana true o false
+en canvi el switch la condicio pot ser int char long..
+
+
+SWITCH: MENÚ segons un valor poden haver diferents casos. Sempre despres d'un cas hem de posar break;
+
+BUCLES:
+WHILE  si la condicon no es verdadera entonces no ejecutara el bucle. Nos sirve para no tener q imprimir manualmete
+simplemente ponemos la condicion imprimimos la i i la incremetamos con ++.
+se repetira hasta q la condicion sea falsa
+
+while(i<=numero){
+ sout ("i")
+ i++
+}
+
+
+
+
+FOR:
+
+int i=1  es el numero que ponemos nosotros. En el caso que lo ponga el usuario SCANNER:
+int contador=30;
+Scanner input= new scanner;
+
+While(i<=contador){   le la variable i tambien que la condicion es correcta
+     sout("i")   imprime el 1
+     i++         le suma al uno un 1 i vuelve al bucle hasta "contador" que ya no se cumple la condicion
+}
+
+
+DO WHILE se ejecutan las intrucciones al menos una vez (DO) i despues comprobarà si la condicion es verdadera o no.
+
+int i =11
+
+do{                   primero imprime sin mirar la condicion
+   imprime("i")
+   i++                le suma 1 al numero imprimido
+} while(i=>10)         i comprueba con el 12 si la condicion es verdadera. si lo es se seguira repitiendo.
+                        Pero si no lo es no se repetira. El resulatdo es que por lo menos habra imprimido un 12.
+
+IF ELSE ( se cumple la condicio entra en el if i sino entra en el else que seria el sino otra opcion
+         obligatoriament ja que el else en aquest cas no te condició
+IF ELSE IF ( hi ha per una banda el IF(condició 1) si es TRUE executa i finalitza
+             i el punt important es que s'executara la condició 2 nomes si es TRUE executa si es FALSE no imprimirà i sortirà del condicional .
+             poden haber infinits else if i obligatoriament per ultim es posa else
+             va pasant d'opció
+
+
+FOR (contadors)  per fer minim dos iteracions l'utilitzem.
+for(int i=0; i<=10; i++){
+   imprime(hola)       }  //se repetira hasta que i sea igual a 10
+La variable  i, j, k del for nomes es pot utilitzar dintre del for.
+
+diferencia entre el for i el while es que el for esta condicionat per tres parts for(inicializacio ; condicio; accio)
+el for ens simplifica tot el proces ja que ho posem dins de la condició
+
+NESTED LOOPS
+
+
+
+
+ESTRUCTURAS:
+PSEUDOCODIGO:  INICI/FINAL
+IF
+- IF (condicio)
+fi
+
+IF ELSE
+- IF (condició)
+- ELSE
+fi
+
+IF ELSE IF
+- IF (condició)
+- ELSE IF (condicio)
+- ELSE IF (condicio)
+- ELSE IF (condicio)
+- ELSE
+fi
+
+WHILE mentres
+- WHILE (condicio)
+fi
+
+DO WHILE para q se repita por lo menos una vez
+- do
+- mentres (condició)
+fi
+
+SWITCH
+segons (opcio)
+   cas 1
+   break (FI)
+   cas 2
+   break (FI)
+   cas 3
+   break (FI)
+   DEFAULT
+   break
+fi
+
+CODIGO:
+exemple if: exercici 1
+exemple if else : exercici 3
+exemple if else if: exercici 8 cas 2 i 3
+exemple while : exericici 14
+i do while i switch: exericici 5 examen
+for: neested loop
