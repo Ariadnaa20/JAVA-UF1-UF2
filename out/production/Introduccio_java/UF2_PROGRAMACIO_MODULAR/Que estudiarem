@@ -1,3 +1,6 @@
+JAVA DOCS
+file:///C:/Users/aripa/IdeaProjects/Ejercicios%20MO3%20Programacio%20Java/index.html
+
 JAVA STRING
 JAVA SMART CODE
 JAVA MÉTODES Funcions
@@ -17,3 +20,23 @@ petits, d'aico se'n diu top-down. exemple:
 Com es crea un metode?
 Modifiers: determinan l'accessiblitat al metode: PUBLIC, PRIVATE(accessible a la clase on d'ha declarat main)
                                                  PROTECTED(accessible a la clase on d'ha declarat main i una herencia)
+
+
+
+
+ SMARTCODING
+ 1-name conventions: lowerCamelCase, no caracters especials
+ CONSTANTS: SEMPRE MAJUSUCULA
+
+ en els metodes utlitzar un Verb
+
+ Les variables adalt
+
+
+
+METODES: un metode una cosa nomes
+
+espacios siempre int array [] = new array []
+ 2- Clean Coding
+ 3- Advantages
+
