@@ -25,6 +25,8 @@ public class Bitllets_PascualAriadna {
             detallesBilletes.add(detalleBillete);
 
             billetesComprados++;
+
+
             if (billetesComprados < MAX_BILLETES) {
                 System.out.println("Vols comprar un altre bitllet? (s/n)");
                 String respuesta = input.next();
@@ -61,6 +63,7 @@ public class Bitllets_PascualAriadna {
                 System.out.println("Eso no es un número. Intente de nuevo:");
                 opcio.next();
             }
+
             opcioTargeta = opcio.nextInt();
             if (opcioTargeta < 1 || opcioTargeta > 5) {
                 System.out.println("Opció no vàlida. Torni a introduir.");
@@ -68,7 +71,6 @@ public class Bitllets_PascualAriadna {
         } while (opcioTargeta < 1 || opcioTargeta > 5);
         return opcioTargeta;
     }
-
 
 
 
