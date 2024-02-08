@@ -3,33 +3,45 @@ package UF2_PROGRAMACIO_MODULAR.EXERCICIS_METODES;
 import java.util.Scanner;
 
 public class Exercici1 {
+
+    /*METODES EMPRATS:
+    Metode prinipal on es criden els altres
+    Metode LlegirNumero
+    Metode ComprovarNumero
+
+    * */
     public static void main(String[] args) {
-        MenuPrincipal();
+        MetodePrincipal();
 
     }
 
-    public static boolean MenuPrincipal(){
-        int numero= NumeroIntroduit();
-        if (esPar(numero)) {
-            System.out.println("El número " + numero + " es par.");
-        } else {
-            System.out.println("El número " + numero + " es impar.");
-        }
+    public static void MetodePrincipal(){
+        int numero= LlegirNumero();
+        boolean esPar = ComprovarNumero(numero); //li asigno el el metode a una variable
+        boolean ImprimirMissatge = EsPar(esPar, numero);
 
-        return false;
     }
 
-
-    public static int NumeroIntroduit(){
+    public static int LlegirNumero(){
         Scanner input= new Scanner(System.in);
-        System.out.println("Introdueix un numero:");
+        int numero=0;
+        System.out.println("Introdueix un numero: ");
         return input.nextInt();
 
+    }
+
+    public static boolean ComprovarNumero(int numero){  //retorna si es true o false
+        return numero % 2 == 0;
 
     }
 
-    public static boolean esPar(int numero){
-        return numero % 2 == 0; // Devuelve true si el número es par, false si es impar.
+    public static boolean EsPar(boolean esPar, int numero){
+        if(esPar){
+            System.out.println("El numero " + numero + " es par.");
+        } else{
+            System.out.println("El numero " + numero + " no es par");
+        }
+      return esPar;
     }
 
 

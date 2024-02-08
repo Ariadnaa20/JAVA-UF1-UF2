@@ -5,15 +5,12 @@ import java.util.Scanner;
 public class Exercici3 {
     public static void main(String[] args) {
         Menuprincipal();
-
-
     }
 
     public static int Menuprincipal() {
         int[] valors = IntrodueixValors();
         int opcio = MenuCalculadora();
         Calculadora(opcio, valors);
-
 
         return opcio;
     }
