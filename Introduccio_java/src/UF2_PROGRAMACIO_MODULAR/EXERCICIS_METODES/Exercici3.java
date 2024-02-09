@@ -3,6 +3,16 @@ package UF2_PROGRAMACIO_MODULAR.EXERCICIS_METODES;
 import java.util.Scanner;
 
 public class Exercici3 {
+
+    /*METODES PRINCIPALS:
+    MenuPrincipal();
+    IntrodueixValors();
+    MenuCalculadora(); //seleccionar quina operacio vol
+    Calculadora(); //parametre opcio usuari i valors. Segons l'opcio es cridara al metode suma, resta,multiplcacio..
+         - metode suma
+         - metode resta....
+
+    */
     public static void main(String[] args) {
         Menuprincipal();
     }
@@ -21,7 +31,7 @@ public class Exercici3 {
         int[] numeros = new int[2];
 
         for (int i = 0; i < numeros.length; i++) {
-            System.out.println("Intrpdueix el primer nombre " + (i + 1));
+            System.out.println("Introdueix el primer nombre " + (i + 1));
             numeros[i] = input.nextInt();
         }
 
@@ -41,7 +51,7 @@ public class Exercici3 {
         Scanner input = new Scanner(System.in);
         switch (opcio) {
             case 1:
-                System.out.println("Resultat de la suma: " + suma(valors[0], valors[1]));
+                System.out.println("Resultat de la suma: " + suma(valors[0], valors[1]));  //crida al metode suma amb els parametres
                 break;
             case 2:
                 System.out.println("Resultat de la resta: " + resta(valors[0], valors[1]));
