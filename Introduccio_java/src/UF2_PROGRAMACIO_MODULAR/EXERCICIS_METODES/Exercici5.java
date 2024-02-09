@@ -8,6 +8,8 @@ public class Exercici5 {
     SeleccioConversio();
     IntroduirGraus();
     RealizacioConversió();
+       - graus de celsius a fahrenheit();
+       - graus de farenheight a celsius();
     ImprimirConversio();
 
     */
@@ -15,6 +17,9 @@ public class Exercici5 {
         MenuPrincipal();
         int opcioConversio = SeleccioConversio();
         double graus= IntroduirGraus();
+        double resultat= RealitzacioConversio(opcioConversio,graus);
+        ImprimirConversio(resultat,opcioConversio);
+
 
     }
 
@@ -39,7 +44,34 @@ public class Exercici5 {
 
     public static double RealitzacioConversio(int opcioConversio, double graus){
         if(opcioConversio==1){
+            System.out.println("La conversio dels graus de celsius a fahrenheit: ");
+            return celsiusAfahrenheit(graus);
+        } else if (opcioConversio==2) {
+            System.out.println("La conversio dels graus de fahrenheit a celsius: ");
+            return fahrenheigtAcelsius(graus);
+
+        }
+        return opcioConversio;
+    }
+
+    public static double celsiusAfahrenheit(double celsius){
+        return (9.0 / 5) * celsius + 32;
+    }
+
+
+    public static double fahrenheigtAcelsius(double fareheight){
+        return (5.0 / 9) * (fareheight - 32);
+    }
+
+
+    public static void ImprimirConversio(double resultat, int opcioConversio){
+        if(opcioConversio==1){
+            System.out.println("La conversio de celsius a fahrenheigt es: " + resultat);
+        } else if (opcioConversio==2) {
+            System.out.println("La conversio de celsius a fahrenheigt es: " + resultat);
 
         }
     }
+
+
 }
