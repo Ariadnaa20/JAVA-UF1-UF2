@@ -19,8 +19,6 @@ public class Exercici5 {
         double graus= IntroduirGraus();
         double resultat= RealitzacioConversio(opcioConversio,graus);
         ImprimirConversio(resultat,opcioConversio);
-
-
     }
 
     public static void MenuPrincipal(){
@@ -45,7 +43,7 @@ public class Exercici5 {
     public static double RealitzacioConversio(int opcioConversio, double graus){
         if(opcioConversio==1){
             System.out.println("La conversio dels graus de celsius a fahrenheit: ");
-            return celsiusAfahrenheit(graus);
+            return celsiusAfahrenheit(graus); /*em retorna el resultat d'un altre metodeamb la variable */
         } else if (opcioConversio==2) {
             System.out.println("La conversio dels graus de fahrenheit a celsius: ");
             return fahrenheigtAcelsius(graus);
