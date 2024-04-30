@@ -1,5 +1,7 @@
 package UF2_PROGRAMACIO_MODULAR.VENDABILLETS;
 
+import UF2_PROGRAMACIO_MODULAR.CALCULADORA.Main;
+
 import java.util.Scanner;
 
 public class ExerciciBitlletsCorreció {
@@ -15,10 +17,11 @@ public class ExerciciBitlletsCorreció {
 
      */
     public static void main(String[] args) {
-        menuprinipal();
+        ExerciciBitlletsCorreció programa = new ExerciciBitlletsCorreció();
+        programa.menuprinipal();
     }
 
-    private static void menuprinipal() {
+    private void menuprinipal() {
         int opcio=0;
         System.out.println("Benvingut a TMB");
         System.out.println("Escull quin tipus de Bitllet  que vulgui");
@@ -53,7 +56,6 @@ public class ExerciciBitlletsCorreció {
             System.out.println("Opció no vàlida, si us plau, tria una opció vàlida.");
             opcio = input.nextInt();
         }
-
 
         return opcio;
     }

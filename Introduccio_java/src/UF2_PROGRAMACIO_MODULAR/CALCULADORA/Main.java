@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Principal();
+    }
+
+    private static void Principal(){
         //Aquí declaramos las instancias o variables que necesitaremos en nuestro programa
         Scanner leerteclado = new Scanner(System.in);
         int opcion =0;
@@ -28,6 +32,7 @@ public class Main {
 
         }while(opcion!=4);
     }
+
     private static void MensajeSalida() {
         System.out.println("Gracias por utilizar nuestro programa de muestra sobre Programación Modular");
     }  /*COMENTARI*/
